@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Form.css">
     <title>Form Validation</title>
 </head>
 <body>
     <form action="thankyou.html">
-        <input type="text" name="Name"><span id="errName" style="display:none"></span>
-        <input type="text" name="email"><span id="errEmail" style="display:none"></span>
-        <input type="text" name="PhoneNum">
-        <input type="radio" name="rButton"  value="" checked /> 
+        <input id="name1" type="text" name="Name"><span id="errName" style="display:none"></span>
+        <input id="email1" type="text" name="email"><span id="errEmail" style="display:none"></span>
+        <input id="num" type="text" name="PhoneNum">
+        <input id="button" type="radio" name="rButton"  value="" checked /> 
         <input type="submit" value="Submit This" onclick="return checkForm(this.form)">
     </form>
-<script src="app.js"></script>
+<script src="Form.js"></script>
 </body>
 </html>
 
