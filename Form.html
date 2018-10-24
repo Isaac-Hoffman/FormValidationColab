@@ -8,18 +8,24 @@
     <title>Form Validation</title>
 </head>
 <body>
-    <form action="thankyou.html">
-        <input id="name1" type="text" name="Name"><span id="errName" style="display:none"></span>
-        <input id="email1" type="text" name="email"><span id="errEmail" style="display:none"></span>
-        <input id="num" type="text" name="PhoneNum">
-        <input id="button" type="radio" name="rButton"  value="" checked /> 
-        <input type="submit" value="Submit This" onclick="return checkForm(this.form)">
+    <!--action="thankyou.html"-->
+        <form>
+        <input placeholder="Name" id="name1" type="text" name="Name"><span id="errName" style="display:none"></span>
+        <input placeholder="Email" id="email1" type="text" name="email"><span id="errEmail" style="display:none"></span>
+        <input placeholder="Phone" id="num" type="text" name="PhoneNum"><span id="errPhone" style="display:none"></span>
+        <input type="submit" value="Submit This" onclick="return checkForm(this.form)"><br>
+        <input id="One" type="radio" name="radButton"  value="One" checked/>One<br>
+        <input id="Two" type="radio" name="radButton"  value="Two"/>Two<br>
+        <input id="Three" type="radio" name="radButton"  value="Three"/>Three<br>
+        <input id="Four" type="radio" name="radButton"  value="Four"/>Four<br>
+        <select id="lstBox">
+            <option value="One">One</option>
+            <option value="Two">Two</option>
+            <option value="Three">Three</option>
+            <option value="Four">Four</option>
+        </select><br>
     </form>
-<script src="Form.js"></script>
+    <span id="results" style="display: none"></span>
+    <script src="Form.js"></script>
 </body>
 </html>
-
-
-
-
-e.	List Box Selection
