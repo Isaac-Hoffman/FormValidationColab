@@ -15,10 +15,10 @@ function checkForm(frm){
         name.innerHTML = "";
     }
     //email field
-    if (frm.email.value == "" || /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/.test(frm.email.value) == false){
+    if (frm.Email.value == "" || /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/.test(frm.email.value) == false){
          isValid = false;
-         frm.email.focus();
-         frm.email.style.backgroundColor = "#f76067";
+         frm.Email.focus();
+         frm.Email.style.backgroundColor = "#f76067";
          var nameEmail = document.getElementById("errEmail");
          nameEmail.style.display = "inline";
          nameEmail.innerHTML = "* required fields are missing";
@@ -29,7 +29,7 @@ function checkForm(frm){
     }
     //check for selected radio
     var radios = ["One","Two","Three","Four"];
-    var i;
+    var i = 0;
     var selectRad = "";
     for (i = 0; i < radios.length; i++) {
         if (document.getElementById(radios[i]).checked) {
@@ -54,3 +54,7 @@ function checkForm(frm){
     //verifies fields meet the required input
     return isValid;
  }
+function displayInfo(){
+    var info = window.location.search.split("=");
+    console.log(info);
+}
