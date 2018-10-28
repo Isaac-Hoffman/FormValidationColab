@@ -55,6 +55,19 @@ function checkForm(frm){
     return isValid;
  }
 function displayInfo(){
-    var info = window.location.search.split("=");
-    console.log(info);
+    var url = window.location.search.split("&");
+    var info = []
+    console.log(url[0]);
+    console.log(url[1]);
+    console.log(url[2]);
+    console.log(url[3]);
+    console.log(url[4]);
+    for (i = 0; i < url.length; i++){
+        info[i] = url[i].split("=").pop();
+    }
+    document.getElementById("TYName").value = info[0].replace("+", " ");
+    document.getElementById("TYEmail").value = info[1].replace("%40", "@");
+    document.getElementById("TYPhone").value = info[2].replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
+    document.getElementById("TYRad").value = info[3];
+    document.getElementById("TYCheck").value = info[4];
 }
