@@ -15,7 +15,7 @@ function checkForm(frm){
         name.innerHTML = "";
     }
     //email field
-    if (frm.Email.value == "" || /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/.test(frm.email.value) == false){
+    if (frm.Email.value == "" || /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]/.test(frm.Email.value) == false){
          isValid = false;
          frm.Email.focus();
          frm.Email.style.backgroundColor = "#f76067";
@@ -57,11 +57,13 @@ function checkForm(frm){
 function displayInfo(){
     var url = window.location.search.split("&");
     var info = []
+    /*
     console.log(url[0]);
     console.log(url[1]);
     console.log(url[2]);
     console.log(url[3]);
     console.log(url[4]);
+    */
     for (i = 0; i < url.length; i++){
         info[i] = url[i].split("=").pop();
     }
